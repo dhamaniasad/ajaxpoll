@@ -32,5 +32,44 @@ To download the production archive containing only the abovementioned files, [cl
 
 ### Adding/Removing Options
 ***
-Adding or removing options is a little bit more complex than using the rest of the script. Hence, I am adding instructions on doing that below. 
+Adding or removing options is a little bit more complex than using the rest of the script. Hence, I am adding instructions on doing that below. Now obviously, the minimmum amount of options you can have is 2, and the production archive file contains 4 options by default. 
 
+#### Adding Options
+First, open up your index.html file in your preferred text editor, and find this code :
+```
+<div id="poll">
+<h3>Place your options here:</h3><br>
+<form>
+Option 1:
+<input type="radio" name="vote" value="0" onclick="getVote(this.value)" />
+<br />Option 2:
+<input type="radio" name="vote" value="1" onclick="getVote(this.value)" />
+<br />Option 3:
+<input type="radio" name="vote" value="2" onclick="getVote(this.value)" />
+<br />Option 4:
+<input type="radio" name="vote" value="3" onclick="getVote(this.value)" />
+</form>
+</div>
+```
+Now, to add more options, simply do this : 
+```
+<div id="poll">
+<h3>Place your options here:</h3><br>
+<form>
+Option 1:
+<input type="radio" name="vote" value="0" onclick="getVote(this.value)" />
+<br />Option 2:
+<input type="radio" name="vote" value="1" onclick="getVote(this.value)" />
+<br />Option 3:
+<input type="radio" name="vote" value="2" onclick="getVote(this.value)" />
+<br />Option 4:
+<input type="radio" name="vote" value="3" onclick="getVote(this.value)" />
+<br />Option 5:
+<input type="radio" name="vote" value="4" onclick="getVote(this.value)" />
+<br />Option 6:
+<input type="radio" name="vote" value="5" onclick="getVote(this.value)" />
+</form>
+</div>
+```
+
+What you have to do here is pretty obvious.
