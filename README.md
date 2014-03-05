@@ -288,7 +288,7 @@ And make sure it matches the changes we've made up till now. This is how your en
 ```
 $insertvote = $ac."||".$an."||".$aa."||".$rk."||".$op."||".$ab;
 ```
-The syntax of this part is pretty easy to understand if you just compare the two parts. At this point, you cannot change the $op or $ab, or whatever else you called the options, as that would break your code. Just keep that in mind. 
+The syntax of this part is pretty easy to understand if you just compare the two parts I've pasted here($insertvote). At this point, you cannot change the $op or $ab, or whatever else you called the options, as that would break your code. Just keep that in mind. 
 
 Part 4:
 ```
@@ -332,3 +332,26 @@ height='60'>
 </tr>
 </table>
 ```
+This is the final part. In the <h2>Result:</h2>, you can call it whatever you like; you can change 'Result:' to something else if you like, for example 'Outcome :' would be like <h2>Outcome :</h2>. 
+This is the main component of the code :
+```
+<tr>
+<td>Option 1</td>
+<td>
+<img src="poll.gif"
+width='<?php echo(100*round($ac/($ac+$an+$aa+$rk),4)); ?>'
+height='60'>
+<?php echo(100*round($ac/($ac+$an+$aa+$rk),4)); ?>%
+</td>
+</tr>
+```
+Now if you've been calling your options Option 1, 2, 3, 4 and so on, then you can of course keep it that way, or if you've called them something else, then you must rename it here to match. Basically you match it to whatever you called it in the index.html file;
+```
+Option 1:
+<input type="radio" name="vote" value="0" onclick="getVote(this.value)" />
+```
+```
+<tr>
+<td>Option 1</td>
+```
+Naming aside, we move to the math of it all. This is the part of the code that plots the graph for you in the end, after you submit the vote. **Now remember, this script is meant to be used in local environments, since it is possible to vote as many times as you like just by refreshing the page. There are better scripts out there if you wish to run a polling script in a non-local environment. You can of course use SurveyMonkey, but I personally prefer [LimeSurvey](http://www.limesurvey.org) over all else.**
