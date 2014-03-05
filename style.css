@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+poll
+{
+	alignment-adjust:center;
+}
+
+footr {
+	display:block;
+	margin-left:400px;
+	margin-right:auto;
+	margin-bottom:0px;
+}

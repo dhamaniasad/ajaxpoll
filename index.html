@@ -1,0 +1,48 @@
+<html>
+<head>
+<title> ajaxpoll | Simple AJAX polling script </title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript">
+function getVote(int)
+{
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("poll").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body bgcolor="White">
+
+<div id="poll">
+<h3>Place your options here:</h3><br>
+<form>
+Option 1:
+<input type="radio" name="vote" value="0" onclick="getVote(this.value)" />
+<br />Option 2:
+<input type="radio" name="vote" value="1" onclick="getVote(this.value)" />
+<br />Option 3:
+<input type="radio" name="vote" value="2" onclick="getVote(this.value)" />
+<br />Option 4:
+<input type="radio" name="vote" value="3" onclick="getVote(this.value)" />
+</form>
+</div>
+<br>
+<div id="footr">
+Sample Footer
+</div>
+</body>
+</html>
