@@ -448,3 +448,7 @@ You change 'Option 1' to 'Option 5', and you change $ac in this part '(100*round
 #### Removing Options
 
 *** Being Edited ***
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/dhamaniasad/ajaxpoll/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
