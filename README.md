@@ -161,3 +161,60 @@ height='60'>
 </tr>
 </table>
 ```
+
+Part 1:
+```
+//put content in array
+$array = explode("||", $content[0]);
+$ac = $array[0];
+$an = $array[1];
+$aa = $array[2];
+$rk = $array[3];
+```
+Here, what you do is you basically give each option a name, similar to the $ac, $an, $aa, and $rk. $ab or $bc both are perfectly fine examples of this.
+This is how the code looks here;
+```
+$rk = $array[3];
+```
+The $rk is the name or identifier, whatever you like to call it, and this is where you are defining how you want to identify a certain option in the rest of the code of the script. The [3] here corresponds to the 'value="3"' we took from the index.html file. Basically what I'm saying is, these two parts of code are linked with one another :
+```
+<br />Option 4:
+<input type="radio" name="vote" value="3" onclick="getVote(this.value)" />
+```
+```
+$rk = $array[3];
+```
+The 3 remains the same in each of them. If instead of 3, I put 4 in $array[], then it would correspond to the option with value 4, or Option 5, since we are using whole numbers.
+
+So in order to add more functions, after adding them to the index.html file, this is what you're going to have to do :
+```
+//put content in array
+$array = explode("||", $content[0]);
+$ac = $array[0];
+$an = $array[1];
+$aa = $array[2];
+$rk = $array[3];
+$op = $array[4];
+$ab = $array[5];
+```
+And obviously, you can use $xy instead of $op or anything else you like. I prefer to keep it double digit but you don't have to, just so long as you don't put spaces in between you should be fine.
+
+Part 2:
+```
+if ($vote == 0)
+  {
+  $ac = $ac + 1;
+  }
+if ($vote == 1)
+  {
+  $an = $an + 1;
+  }
+if ($vote == 2)
+  {
+  $aa = $aa + 1;
+  }
+if ($vote == 3)
+  {
+  $rk = $rk + 1;
+  }
+```
