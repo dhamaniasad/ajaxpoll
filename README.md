@@ -218,3 +218,117 @@ if ($vote == 3)
   $rk = $rk + 1;
   }
 ```
+In this part, you can simply copy paste this section :
+```
+if ($vote == 3)
+  {
+  $rk = $rk + 1;
+  }
+```
+And then modify it to match the changes you've made earlier, like this :
+```
+if ($vote == 4)
+  {
+  $op = $op + 1;
+  }
+if ($vote == 5)
+  {
+  $ab = $ab + 1;
+  }
+```
+And so, your end result should look like this :
+```
+if ($vote == 0)
+  {
+  $ac = $ac + 1;
+  }
+if ($vote == 1)
+  {
+  $an = $an + 1;
+  }
+if ($vote == 2)
+  {
+  $aa = $aa + 1;
+  }
+if ($vote == 3)
+  {
+  $rk = $rk + 1;
+  }
+if ($vote == 4)
+  {
+  $op = $op + 1;
+  }
+if ($vote == 5)
+  {
+  $ab = $ab + 1;
+  }
+```
+
+Part 3:
+```
+//insert votes to txt file
+$insertvote = $ac."||".$an."||".$aa."||".$rk;
+$fp = fopen($filename,"w");
+fputs($fp,$insertvote);
+fclose($fp);
+?>
+```
+Now this is the part which saves your result to the text file poll_result.txt by default. The name of the file is defined in this part of the code:
+```
+//get content of textfile
+$filename = "poll_result.txt";
+$content = file($filename);
+```
+If you decide to change the name of the text file, be sure to add an empty txt file matching that name to the root directory of the script.
+Editing this part isn't difficult either. You only have to edit this part :
+```
+$insertvote = $ac."||".$an."||".$aa."||".$rk;
+```
+And make sure it matches the changes we've made up till now. This is how your end result should look :
+```
+$insertvote = $ac."||".$an."||".$aa."||".$rk."||".$op."||".$ab;
+```
+The syntax of this part is pretty easy to understand if you just compare the two parts. At this point, you cannot change the $op or $ab, or whatever else you called the options, as that would break your code. Just keep that in mind. 
+
+Part 4:
+```
+<h2>Result:</h2>
+<table>
+<tr>
+<td>Option 1</td>
+<td>
+<img src="poll.gif"
+width='<?php echo(100*round($ac/($ac+$an+$aa+$rk),4)); ?>'
+height='60'>
+<?php echo(100*round($ac/($ac+$an+$aa+$rk),4)); ?>%
+</td>
+</tr>
+<tr>
+<td>Option 2</td>
+<td>
+<img src="poll.gif"
+width='<?php echo(100*round($an/($ac+$an+$aa+$rk),4)); ?>'
+height='60'>
+<?php echo(100*round($an/($ac+$an+$aa+$rk),4)); ?>%
+</td>
+</tr>
+<tr>
+<td>Option 3</td>
+<td>
+<img src="poll.gif"
+width='<?php echo(100*round($aa/($ac+$an+$aa+$rk),4)); ?>'
+height='60'>
+<?php echo(100*round($aa/($ac+$an+$aa+$rk),4)); ?>%
+</td>
+</tr>
+<tr>
+<td>Option 4</td>
+<td>
+<img src="poll.gif"
+width='<?php echo(100*round($rk/($ac+$an+$aa+$rk),4)); ?>'
+height='60'>
+<?php echo(100*round($rk/($ac+$an+$aa+$rk),4)); ?>%
+</td>
+</tr>
+</table>
+```
