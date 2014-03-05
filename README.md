@@ -7,4 +7,6 @@ Live Demo : [Click Here](http://dhamaniasad.github.io/ajaxpoll/)
 
 #### Screenshots
 
-![Mou icon](screenshot.png)
+![Polling Screen](screenshot1.png)
+
+![Result Screen](screenshot.png)
