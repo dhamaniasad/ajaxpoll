@@ -32,3 +32,5 @@ To download the production archive containing only the abovementioned files, [cl
 
 ### Adding/Removing Options
 ***
+Adding or removing options is a little bit more complex than using the rest of the script. Hence, I am adding instructions on doing that below. 
+
