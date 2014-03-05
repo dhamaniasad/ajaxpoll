@@ -5,6 +5,10 @@ A simple AJAX polling script
 
 Live Demo : [Click Here](http://dhamaniasad.github.io/ajaxpoll/)
 
+###### Live Demo seems to be malfunctioning; however, the production code has been tested and works as expected.
+
+Download : [Click Here](https://github.com/dhamaniasad/ajaxpoll/archive/production.zip)
+
 ### Screenshots
 ***
 ![Polling Screen](screenshot1.png)
@@ -24,3 +28,7 @@ poll_result.txt
 poll_vote.php
 style.css
 ```
+To download the production archive containing only the abovementioned files, [click here](https://github.com/dhamaniasad/ajaxpoll/archive/production.zip)
+
+### Adding/Removing Options
+***
