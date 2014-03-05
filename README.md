@@ -332,7 +332,7 @@ height='60'>
 </tr>
 </table>
 ```
-This is the final part. In the `<h2>Result:</h2>`, you can call it whatever you like; you can change 'Result:' to something else if you like, for example 'Outcome :' would be like `<h2>Outcome :</h2>`. 
+This is the final part. The heading, `<h2>Result:</h2>`, can of course be changed to something else if you like. To change 'Result:' to something else, for instance, 'Outcome :', you'd have to change the code to this :  `<h2>Outcome :</h2>`. 
 This is the main component of the code :
 ```
 <tr>
