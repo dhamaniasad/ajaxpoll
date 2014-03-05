@@ -354,10 +354,93 @@ Option 1:
 <tr>
 <td>Option 1</td>
 ```
-Naming aside, we move to the math of it all. This is the part of the code that plots the graph for you in the end, after you submit the vote. 
+Naming aside, we move to the math of it all. This is the part of the code that plots the graph for you in the end, after you submit the vote. <br>
 **Now remember, this script is meant to be used in local environments, since it is possible to vote as many times as you like just by refreshing the page. There are better scripts out there if you wish to run a polling script in a non-local environment. You can of course use SurveyMonkey, but I personally prefer [LimeSurvey](http://www.limesurvey.org) over all else.**
 ```
 width='<?php echo(100*round($ac/($ac+$an+$aa+$rk),4)); ?>'
 height='60'>
 <?php echo(100*round($ac/($ac+$an+$aa+$rk),4)); ?>%
 ```
+Now editing this part of the code isn't difficult either, just keep the syntax in mind. $ac corresponds to Option 1 here.
+To get this part of the code to match the changes we've made so far, here's the changes we've got to make.
+```
+width='<?php echo(100*round($ac/($ac+$an+$aa+$rk+$op+$ab),6)); ?>'
+height='60'>
+<?php echo(100*round($ac/($ac+$an+$aa+$rk+$op+$ab),6)); ?>%
+```
+Now as you can notice, we added the two other options that we added earlier to the code, namely $op and $ab, and since that makes for six options, as opposed to four earlier, we changed the ',4));' in the end to ',6));'. After modifying all of the code for the new options, this is what we will end up with :
+```
+<h2>Result:</h2>
+<table>
+<tr>
+<td>Option 1</td>
+<td>
+<img src="poll.gif"
+width='<?php echo(100*round($ac/$ac+$an+$aa+$rk+$op+$ab),6)); ?>'
+height='60'>
+<?php echo(100*round($ac/($ac+$an+$aa+$rk+$op+$ab),6)); ?>%
+</td>
+</tr>
+<tr>
+<td>Option 2</td>
+<td>
+<img src="poll.gif"
+width='<?php echo(100*round($an/($ac+$an+$aa+$rk+$op+$ab),6)); ?>'
+height='60'>
+<?php echo(100*round($an/($ac+$an+$aa+$rk+$op+$ab),6)); ?>%
+</td>
+</tr>
+<tr>
+<td>Option 3</td>
+<td>
+<img src="poll.gif"
+width='<?php echo(100*round($aa/($ac+$an+$aa+$rk+$op+$ab),6)); ?>'
+height='60'>
+<?php echo(100*round($aa/($ac+$an+$aa+$rk+$op+$ab),6)); ?>%
+</td>
+</tr>
+<tr>
+<td>Option 4</td>
+<td>
+<img src="poll.gif"
+width='<?php echo(100*round($rk/($ac+$an+$aa+$rk+$op+$ab),6)); ?>'
+height='60'>
+<?php echo(100*round($rk/($ac+$an+$aa+$rk+$op+$ab),6)); ?>%
+</td>
+</tr>
+<tr>
+<td>Option 5</td>
+<td>
+<img src="poll.gif"
+width='<?php echo(100*round($op/($ac+$an+$aa+$rk+$op+$ab),6)); ?>'
+height='60'>
+<?php echo(100*round($op/($ac+$an+$aa+$rk+$op+$ab),6)); ?>%
+</td>
+</tr>
+<tr>
+<td>Option 6</td>
+<td>
+<img src="poll.gif"
+width='<?php echo(100*round($ab/($ac+$an+$aa+$rk+$op+$ab),6)); ?>'
+height='60'>
+<?php echo(100*round($ab/($ac+$an+$aa+$rk+$op+$ab),6)); ?>%
+</td>
+</tr>
+</table>
+```
+The changes that have to be made here are pretty self explanatory. Here they are :
+* change number from 4 to 6, or whatever the number of options you have added is.
+* For example, if you have to add option 5, then after you copy paste this part of the code :
+```
+<tr>
+<td>Option 1</td>
+<td>
+<img src="poll.gif"
+width='<?php echo(100*round($ac/($ac+$an+$aa+$rk),4)); ?>'
+height='60'>
+<?php echo(100*round($ac/($ac+$an+$aa+$rk),4)); ?>%
+</td>
+</tr>
+```
+You change 'Option 1' to 'Option 5', and you change $ac in this part '(100*round($ac/' to whatever it is that you named the option, in this case, $op.
+* Then, you add '+$op+$ab' to '($ac+$an+$aa+$rk)' so that when it computes the graph, it also takes the newly added options into account.
