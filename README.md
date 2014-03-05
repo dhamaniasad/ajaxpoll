@@ -72,4 +72,13 @@ Option 1:
 </div>
 ```
 
-What you have to do here is pretty obvious.
+What you have to do here is pretty obvious. Just keep adding this line : 
+```
+<br />Option x:
+<input type="radio" name="vote" value="x" onclick="getVote(this.value)" />
+```
+Replace 'Option x' with whatever you want the option to be, and in the 'value="x"' part, just look at the value of the last option, and add 1 to it, in a n+1 fashion.
+
+The next file you need to edit is poll_vote.php.
+
+
