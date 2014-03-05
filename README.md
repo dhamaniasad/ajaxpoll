@@ -444,3 +444,7 @@ height='60'>
 ```
 You change 'Option 1' to 'Option 5', and you change $ac in this part '(100*round($ac/' to whatever it is that you named the option, in this case, $op.
 * Then, you add '+$op+$ab' to '($ac+$an+$aa+$rk)' so that when it computes the graph, it also takes the newly added options into account.
+
+#### Removing Options
+
+*** Being Edited ***
