@@ -11,7 +11,7 @@ Download : [Click Here](https://github.com/dhamaniasad/ajaxpoll/archive/producti
 
 ### Screenshots
 ***
-![Polling Screen](screenshot1.png)
+![Polling Screen](screenshot1.png)t
 
 ![Result Screen](screenshot.png)
 
@@ -332,7 +332,7 @@ height='60'>
 </tr>
 </table>
 ```
-This is the final part. In the <h2>Result:</h2>, you can call it whatever you like; you can change 'Result:' to something else if you like, for example 'Outcome :' would be like <h2>Outcome :</h2>. 
+This is the final part. In the `<h2>Result:</h2>`, you can call it whatever you like; you can change 'Result:' to something else if you like, for example 'Outcome :' would be like `<h2>Outcome :</h2>`. 
 This is the main component of the code :
 ```
 <tr>
