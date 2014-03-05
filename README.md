@@ -11,7 +11,7 @@ Download : [Click Here](https://github.com/dhamaniasad/ajaxpoll/archive/producti
 
 ### Screenshots
 ***
-![Polling Screen](screenshot1.png)t
+![Polling Screen](screenshot1.png)
 
 ![Result Screen](screenshot.png)
 
