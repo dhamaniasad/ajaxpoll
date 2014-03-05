@@ -17,6 +17,10 @@ Use my script [here](https://github.com/dhamaniasad/lowendscript) to easily set 
 
 These are the files you must place in your web folder(public_html | /var/www/ | /usr/share/nginx/html | etc.)
 
-| ------------ | ------------- | ------------ |
-| index.html   | poll.gif      | poll_result.txt |
-| poll_vote.php | style.css    | |
+```
+index.html
+poll.gif
+poll_result.txt
+poll_vote.php
+style.css
+```
