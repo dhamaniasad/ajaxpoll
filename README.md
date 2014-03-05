@@ -354,4 +354,10 @@ Option 1:
 <tr>
 <td>Option 1</td>
 ```
-Naming aside, we move to the math of it all. This is the part of the code that plots the graph for you in the end, after you submit the vote. **Now remember, this script is meant to be used in local environments, since it is possible to vote as many times as you like just by refreshing the page. There are better scripts out there if you wish to run a polling script in a non-local environment. You can of course use SurveyMonkey, but I personally prefer [LimeSurvey](http://www.limesurvey.org) over all else.**
+Naming aside, we move to the math of it all. This is the part of the code that plots the graph for you in the end, after you submit the vote. 
+**Now remember, this script is meant to be used in local environments, since it is possible to vote as many times as you like just by refreshing the page. There are better scripts out there if you wish to run a polling script in a non-local environment. You can of course use SurveyMonkey, but I personally prefer [LimeSurvey](http://www.limesurvey.org) over all else.**
+```
+width='<?php echo(100*round($ac/($ac+$an+$aa+$rk),4)); ?>'
+height='60'>
+<?php echo(100*round($ac/($ac+$an+$aa+$rk),4)); ?>%
+```
